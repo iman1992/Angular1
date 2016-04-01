@@ -1,0 +1,46 @@
+<div class="col-md-6" style="border: thin lightblue solid; border-radius: 5px;padding: 1em;" ng-controller="CarController as carCtrl">
+    <h2>Edit Car</h2>
+    <hr/>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="year">Year:</label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="year" ng-model="newCar.year" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="registered">Registered:</label>
+            <div class="col-sm-6">
+                <input type="date" class="form-control" id="registered" ng-model="newCar.registered" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="make">Make:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="make" ng-model="newCar.make" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="model">Model:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="model" ng-model="newCar.model" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="description">Description:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="description" ng-model="newCar.description" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="price">Price:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="price" ng-model="newCar.price" required>
+                <br/>
+                <input type="hidden" ng-model="newCar.id"/>
+                <input type="button" value="Add" ng-click="carCtrl.add(newCar);">
+            </div>
+        </div>
+    </form>
+</div>
+
